@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Blog</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+            body {
+                background-color: #f8f9fa;
+                text-align: center;
+                padding: 20px;
+            }
+            header {
+                padding: 20px;
+                background-color: #222;
+                color: white;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .blog-container {
+                max-width: 800px;
+                margin: 40px auto;
+                text-align: left;
+            }
+            .blog-post {
+                background: white;
+                padding: 20px;
+                margin-bottom: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .blog-post img {
+                 width: 100%;
+                 height: auto; /* Ensures the image keeps its aspect ratio */
+                 max-height: none; /* Removes forced height limits */
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+    
+            .blog-title {
+                font-size: 22px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+            }
+            .blog-date {
+                font-size: 14px;
+                color: #777;
+                margin-bottom: 15px;
+            }
+            .blog-text {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.6;
+            }
+            footer {
+                margin-top: 40px;
+                padding: 15px;
+                background-color: #222;
+                color: white;
+                font-size: 14px;
+            }
+    
+            /* 🔹 FIX: Styling for Figure Captions & Image Size */
+            figcaption {
+                font-size: 16px;  /* Make text larger */
+                font-weight: bold; /* Make it stand out */
+                color: #444;       /* Darker for better readability */
+                text-align: center;
+                margin-top: 5px;
+            }
+    
+            figure img {
+                max-width: 80%;  /* Make image smaller */
+                height: auto;    /* Keep aspect ratio */
+                display: block;
+                margin: 0 auto;  /* Center the image */
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+<body>
+
+    <header>
+        A3. Visualization Critique & Redesign
+        <p class="author-name">Andrea Jimenez Fernandez</p>
+    </header>
+
+    <div class="blog-container">
+        <div class="blog-post">
+            <div class="blog-title">Visualization Critique</div>
+            <div class="blog-date">Pros and Cons</div>
+            <img src="paso1.jpg" alt="Nature">
+            <div class="blog-text">
+                <h4>Pros</h4>  <!-- Corrected from <subtittle> -->
+                <ul class="green-check-fa">
+                    <li><i class="fas fa-check-circle" style="color: green;"></i> It is different/ unusual. So you might be drawn to read the article as curiosity just because it is so unique.</li>
+                    <li><i class="fas fa-check-circle" style="color: green;"></i> Good to bring attention for an important topic</li>
+                    <li><i class="fas fa-check-circle" style="color: green;"></i> I like how you can see how some cases might be happening in monthley intervals</li>
+                    <li><i class="fas fa-check-circle" style="color: green;"></i> It looks like a loop or seasonality. Covid felt like we were in the same cycle again and again.</li>
+                    <li><i class="fas fa-check-circle" style="color: green;"></i> I like how you can compare month over month year over year</li>
+                </ul>
+                
+                <h4>Cons</h4>  
+                <ul class="red-x-fa">
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> The visualization reminded me of a tapeworm. I got distracted trying to unsee it.</li>
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> It is not centered, which might affect confidence in the data. The timeline is also altered.</li>
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> I don't understand the little triangle. What does it represent?</li>
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> The pink color resembles a tapeworm, but there is no heatmap. The visualization relies only on thickness to represent more cases—but how many? Is that what the triangle indicates?</li>
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> The scale is not understandable. Going back to the previous point, thickness = more cases, but how many?</li>
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> The comparison is not quantitative.</li>
+                    <li><i class="fas fa-times-circle" style="color: red;"></i> This visualization cannot be used to make important decisions.</li>
+                </ul>
+                
+                    
+            </div>
+        </div>
+  
+        <div class="blog-container">
+            <div class="blog-post">
+                <div class="blog-title">Visualization Redesign</div>
+                <div class="blog-date">Three different designs</div>
+        
+                <figure>
+                    <img src="paso2.jpg" alt="Classic Bar Chart">
+                    <figcaption>Figure 1: Classic Bar Chart Comparison</figcaption>
+                </figure>
+        
+                <div class="description">
+                    Here, I wanted to use a classic bar chart to compare cases per month and year. 
+                    One issue with the original visualization was how hard it was to make quantitative decisions. 
+                    This redesign allows for better comparison, but it is not as "beautiful" or different as the original. 
+                    It also lacks weekly detail. I think the timeline is well defined, but it is still not as creative.
+                </div>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-post">
+                <figure>
+                    <img src="paso3.jpg" alt="New Cases Heatmap Monthley Bubbles">
+                    <figcaption>Figure 2: New Cases Heatmap Monthley Bubbles  
+                    </figcaption>
+                </figure>
+        
+                <div class="description">
+                    On this graph I wanted to use a little of both visualizations.
+                    The bubble size depends on the amount of new cases per month.
+                    There is also a heatmap.
+                    You can compare month vs month every year.
+                    The data has lables making it easy to make decisions.
+                    There is no weekly detail and might be difficult to make in a program.
+                </div>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-post">
+                <figure>
+                    <img src="paso4.jpg" alt="New Cases Heatmap Monthley Bubbles">
+                    <figcaption>Figure 3: New Cases Mountian Histogram</figcaption>
+                </figure>
+        
+                <div class="description">
+                    On this visualization I wanted to show the changes over months, but aggregated with changes and how cases increased over the years.
+                    I wanted it to be visualy nice but useful to make decisions. The 2022 looks like it was cut, and it's not easy to interpret the data.But it's easy to see the growth over the years.
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-container">
+            <div class="blog-post">
+                <figure>
+                    <img src="Paso 5.jpg" alt="New Cases Heatmap Monthley Bubbles">
+                    <figcaption>Figure 3: New case agregated bubble heatmap </figcaption>
+                </figure>
+            </div>
+        </div>
+<p>The goal of my visual redesigns was to create a more effective and interpretable representation of new COVID-19 cases while addressing the weaknesses of the original visualization. Each design emphasizes different aspects of the data: the bar chart highlights precise month-to-month comparisons, the heatmap enhances trends over time, and the mountain histogram makes it easier to see long-term case growth. My final visualization, a bubble chart with a heatmap, was an attempt to combine the best aspects of previous designs into a single representation. The bubble size encodes the number of cases per month, while the heatmap provides an additional layer of density information, making it possible to compare trends across years. I wanted to maintain some visual appeal while prioritizing quantitative clarity, ensuring the data was useful for analysis but still engaging.
+    To create the final visualization, I had to work within the constraints of Excel, as no standard visualization tool directly matched my idea. The data had to be cleaned manually, with negative and null values removed, and only new cases per month retained. I then applied a heatmap to highlight density differences and manually scaled bubble diameters based on case numbers. One limitation I encountered was that the bubble size made smaller changes difficult to notice, and the color variation was subtle due to minimal case fluctuations. This illustrates a key challenge in visualization design: emphasizing certain aspects of data can sometimes obscure finer details. Although this redesign addressed some of my initial critiques such as making the data easier to compare and interpret it also reinforced that no single visualization is perfect. Trade-offs exist between clarity, aesthetics, and complexity, and balancing these elements remains a core challenge in data storytelling.
+    </p>
+    <footer>
+     Thanks!
+    </footer>
+
+</body>
+</html>
